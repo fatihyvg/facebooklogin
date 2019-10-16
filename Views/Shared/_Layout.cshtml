@@ -1,0 +1,23 @@
+@using Microsoft.AspNetCore.Authentication;
+@inject IAuthenticationSchemeProvider scheme
+@model List<FacebookLogin>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        @RenderBody()
+           @foreach (var item in await scheme.GetRequestHandlerSchemesAsync())
+     {
+        <a class="login" asp-action="Login" asp-route-provider="@item.Name" asp-route-returnUrl="@Url.RouteUrl("returnUrl")">Facebook Giriş</a>
+     }
+     @foreach (var item in Model)
+     {
+         <p>@item.UserFbId</p>
+         <p>@item.UserName</p>
+         <p>@item.UserEmail</p>
+     }
+
+    </body>
+</html>
