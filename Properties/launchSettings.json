@@ -2,7 +2,7 @@
     "facebook": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://www.7fotograf.com;http://www.7fotograf.com",
+      "applicationUrl": "https://www.site.com;http://www.site.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
